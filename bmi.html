@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="bmi.css">
+    <link rel="stylesheet" href="navbar.css">
+    <script src="bmi.js" defer></script>
+    <script src="navbar.js" defer></script>
+
+</head>
+
+<body>
+    <div id="navbar-container"></div>
+    <main class="container">
+        <h1 class="title">BMI Calculator</h1>
+        <!--inputs(weight/height)-->
+        <div class="input-group">
+            <section class="input-box">
+                <label for="weightInput">Weight(Kg)</label>
+                <input type="number" id="weightInput">
+            </section>
+
+            <section class="input-box">
+                <label for="heightInput">Height(cm)</label>
+                <input type="number" id="heightInput">
+            </section>
+        </div>
+        <!--results-->
+        <div class="result-box">
+            <h1 id="resultBmiScore" class="bmi-score">0</h1>
+            <h3 id="resultBmiCategory" class="bmi-category">N/A</h3>
+        </div>
+        <!--range-->
+        <div class="bmi-range-group">
+            <section class="underweight">
+                <div class="bmi-line"></div>
+                <h5 class="bmi-label">Underweight</h5>
+                <h4 class="bmi-number">&lt;18.5</h4>
+            </section>
+            <section class="normal">
+                <div class="bmi-line"></div>
+                <h5 class="bmi-label">Normal</h5>
+                <h4 class="bmi-number">18.5-24.9</h4>
+            </section>
+            <section class="overweight">
+                <div class="bmi-line"></div>
+                <h5 class="bmi-label">Overweight</h5>
+                <h4 class="bmi-number"> 25-29.9</h4>
+            </section>
+            <section class="obese">
+                <div class="bmi-line"></div>
+                <h5 class="bmi-label">Obese</h5>
+                <h4 class="bmi-number">&gt;30</h4>
+            </section>
+            <!--bmi indicator-->
+            <div id="bmiIndicator" class="bmi-indicator"></div>
+        </div>
+        <div class="button-group">
+            <!--reset-->
+            <button id="resetButton" class="reset-button">RESET</button>
+            <!--calculate-->
+            <button id="calculateButton" class="calculate-button">CALCULATE</button>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
